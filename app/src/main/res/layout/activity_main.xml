@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#A5DCFA"
-    android:padding="20dp"
+    android:padding="30dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
     <ScrollView
@@ -21,13 +20,14 @@
             android:orientation="horizontal"
             android:gravity="end">
             <EditText
-                android:layout_width="310dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/searchTv"
                 android:hint="search word here..."
+                android:background="@drawable/background"
                 android:padding="5dp"
-                android:textColor="@color/black"
-                android:background="@drawable/background"/>
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="40dp"
@@ -46,8 +46,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/loading"
                 android:id="@+id/word_id"
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="20sp"
+                android:textAllCaps="true"
                 android:textAlignment="center"/>
             <ImageView
                 android:layout_width="40dp"
@@ -63,14 +65,14 @@
                 android:layout_height="wrap_content"
                 android:text="Definition"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="5dp"/>
 
         <TextView
             android:id="@+id/definitionTv"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/background"
             android:padding="5dp"
@@ -79,6 +81,43 @@
             android:textIsSelectable="true"
             android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PartofSpeech"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/psTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/background"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Synonyms"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/synonymTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background"
+            android:text="@string/loading"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:textIsSelectable="true"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,26 +130,6 @@
             android:id="@+id/exampleTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:text="@string/loading"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:background="@drawable/background"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Origin"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:padding="5dp"/>
-        <TextView
-            android:id="@+id/originTv"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/background"
             android:text="@string/loading"
