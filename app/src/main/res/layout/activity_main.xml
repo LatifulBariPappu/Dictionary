@@ -15,35 +15,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/searchTv"
                 android:hint="search word here..."
                 android:padding="5dp"
                 android:textColor="@color/black"
                 android:background="@drawable/background"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="end">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:id="@+id/SearchBtn"
                 android:src="@drawable/search"
-
                 />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:id="@+id/word_id"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textAlignment="center"/>
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:id="@+id/speakBtn"
                 android:src="@drawable/mic"
+                android:layout_gravity="end"
                 />
-        </LinearLayout>
 
-            <TextView
+        </LinearLayout>
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Definition"
@@ -51,16 +66,19 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:padding="5dp"/>
+
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/definitionTv"
+            android:layout_width="match_parent"
             android:layout_height="350dp"
             android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:text="loading..."
             android:background="@drawable/background"
+            android:padding="5dp"
+            android:text="@string/loading"
             android:textColor="@color/black"
-            android:textSize="16sp"/>
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,7 +94,7 @@
             android:layout_marginTop="10dp"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="loading..."
+            android:text="@string/loading"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:marqueeRepeatLimit="marquee_forever"
@@ -95,11 +113,12 @@
             android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/background"
-            android:text="loading..."
+            android:text="@string/loading"
             android:textSize="16sp"
-            android:textColor="#C87CB5E6"
-            android:padding="5dp"/>
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:textIsSelectable="true"/>
+
     </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
